@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8d7d9c82398a477d80a438ac12a98b94" Name="Diagram1">
+        <EntityTypeShape EntityType="CentudyDatabaseModel.Cart" Width="1.5" PointX="2.125" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentudyDatabaseModel.DetailTransaction" Width="1.5" PointX="4.875" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentudyDatabaseModel.HeaderTransaction" Width="1.5" PointX="7.875" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentudyDatabaseModel.Medicine" Width="1.5" PointX="2.125" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentudyDatabaseModel.Role" Width="1.5" PointX="8.125" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentudyDatabaseModel.User" Width="1.5" PointX="5" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="CentudyDatabaseModel.FK_Cart_Medicine" ManuallyRouted="false" />
+        <AssociationConnector Association="CentudyDatabaseModel.FK_Cart_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CentudyDatabaseModel.FK_DetailTransaction_Medicine" ManuallyRouted="false" />
+        <AssociationConnector Association="CentudyDatabaseModel.FK_DetailTransaction_Transaction" ManuallyRouted="false" />
+        <AssociationConnector Association="CentudyDatabaseModel.FK__HeaderTra__UserI__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="CentudyDatabaseModel.FK__User__RoleId__276EDEB3" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
