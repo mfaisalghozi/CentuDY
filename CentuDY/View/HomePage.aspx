@@ -2,7 +2,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <h1>Init Project</h1>
-    </div>
+    <asp:Label ID="WelcomeMessageLabel" runat="server" Text=""></asp:Label>
 </asp:Content>
