@@ -34,12 +34,14 @@ namespace CentuDY.Repository
 
         public static User getUser(String username, String password)
         {
-            return db.Users.Where(user => user.Username == username && user.Password == password).FirstOrDefault();
+            User u = db.Users.Where(user => user.Username == username && user.Password == password).FirstOrDefault();
+            return u;
         }
         
         public static User getUserById(int id)
         {
-            return db.Users.Where(user => user.UserId == id ).FirstOrDefault();
+            User u = db.Users.Where(user => user.UserId == id).FirstOrDefault();
+            return u;
         }
     }
 

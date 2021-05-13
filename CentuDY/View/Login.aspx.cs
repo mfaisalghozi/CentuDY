@@ -11,8 +11,10 @@ namespace CentuDY.View
 {
     public partial class Login : System.Web.UI.Page
     {
+        string password;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             HttpCookie rememberCookie = Request.Cookies["remember_user"];
             if (Session["user"] != null)
             {
@@ -23,13 +25,19 @@ namespace CentuDY.View
                 String[] rememberUser = rememberCookie.Value.ToString().Split('%');
                 String username = rememberUser[0];
                 String password = rememberUser[1];
-                UsernameBox.Text = username;
-                PasswordBox.Attributes["value"] = password;
+                User login = UserController.login(username, password);
+                Session["user"] = login.UserId;
+                Session["role"] = login.RoleId;
+                Response.Redirect("HomePage.aspx");
+                //UsernameBox.Text = username;
+                //PasswordBox.Attributes["value"] = password;
             }
+
         }
 
         protected void login(object sender, EventArgs e)
         {
+            
             String username = UsernameBox.Text;
             String password = PasswordBox.Text;
 
@@ -45,6 +53,7 @@ namespace CentuDY.View
             if (login != null)
             {
                 Session["user"] = login.UserId;
+                Session["role"] = login.RoleId;
                 if (RememberMe.Checked)
                 {
                     HttpCookie cookie = new HttpCookie("remember_user", username+"%"+password);
@@ -58,5 +67,6 @@ namespace CentuDY.View
                 ErrorMessage.Text = "Wrong username or password";
             }
         }
+
     }
 }

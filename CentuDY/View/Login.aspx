@@ -5,11 +5,11 @@
     <h2>Login to Centudy</h2>
     <div class="contentForm-short">
         <div>
-            <asp:Label ID="UsernameLabel" runat="server" Text="Username:"></asp:Label>&nbsp<br />
+            <asp:Label ID="UsernameLabel" runat="server" Text="Username:"></asp:Label><br />
             <asp:TextBox ID="UsernameBox" runat="server" ></asp:TextBox>
             <br />
 
-            <asp:Label ID="PasswordLabel" runat="server" Text="Password:"></asp:Label>&nbsp<br />
+            <asp:Label ID="PasswordLabel" runat="server" Text="Password:"></asp:Label><br />
             <asp:TextBox ID="PasswordBox" runat="server" TextMode="Password"></asp:TextBox>
             <br />
 
