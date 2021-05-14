@@ -77,7 +77,8 @@ namespace CentuDY.View
 
         protected void addToCartMedicine(object sender, EventArgs e)
         {
-            Response.Redirect("Carts/ViewCart.aspx");
+            int medicineId = Int32.Parse((sender as LinkButton).CommandArgument);
+            Response.Redirect("Carts/AddToCart.aspx?id=" + medicineId);
         }
     }
 }
