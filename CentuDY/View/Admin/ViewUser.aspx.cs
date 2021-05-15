@@ -19,6 +19,15 @@ namespace CentuDY.View.Admin
             users = AdminController.getAllUsers();
             ViewUserTable.DataSource = users;
             ViewUserTable.DataBind();
+
+        }
+
+        protected void ViewUserTable_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int userIndex = int.Parse(e.CommandArgument.ToString());
+            AdminController.deleteUserByIndex(userIndex);
+
+            Response.Redirect("./ViewUser.aspx");
         }
     }
 }

@@ -13,5 +13,12 @@ namespace CentuDY.Controller
         {
             return AdminHandler.getAllUsers();
         }
+
+        internal static void deleteUserByIndex(int userIndex)
+        {
+            AdminHandler.deleteUsersByIndex(userIndex);
+        }
+
+
     }
 }

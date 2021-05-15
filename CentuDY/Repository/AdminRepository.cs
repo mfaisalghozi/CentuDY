@@ -13,7 +13,20 @@ namespace CentuDY.Repository
 
         public static List<User> getAllUsers()
         {
-            return db.Users.ToList();
+
+            var query = from x in db.Users where x.RoleId == 1 select x;
+            return query.ToList();
         }
+
+        public static void deleteUserByIndex(int userIndex)
+        {
+
+            User userToDelete = db.Users.Find(userIndex);
+
+            db.Users.Remove(userToDelete);
+            db.SaveChanges();
+        }
+
+       
     }
 }
