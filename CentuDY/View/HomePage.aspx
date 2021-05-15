@@ -17,6 +17,8 @@
     </br>
     <asp:Button ID="InsertMedicineButton" runat="server" Text="Insert Medicine" OnClick="goToInsertMedicine" Visible="False" />
     </br>
+    <asp:Button ID="ViewUserButton" runat="server" Text="View User" OnClick="goToViewUser" Visible="False" />
+    <br />
     <asp:Button ID="ViewCartButton" runat="server" Text="View Cart" OnClick="goToViewCart" Visible="True" />
     </br>
     </br>

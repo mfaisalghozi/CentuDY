@@ -36,6 +36,7 @@ namespace CentuDY.View
                 if (roleId == 2)
                 {
                     InsertMedicineButton.Visible = true;
+                    ViewUserButton.Visible = true;
                     ViewCartButton.Visible = false;
                     MedicineRandomTable.Visible = false;
                 }
@@ -79,6 +80,12 @@ namespace CentuDY.View
         {
             int medicineId = Int32.Parse((sender as LinkButton).CommandArgument);
             Response.Redirect("Carts/AddToCart.aspx?id=" + medicineId);
+        }
+
+        protected void goToViewUser(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin/ViewUser.aspx");
+
         }
     }
 }
