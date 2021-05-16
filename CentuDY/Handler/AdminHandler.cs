@@ -15,9 +15,9 @@ namespace CentuDY.Handler
             return AdminRepository.getAllUsers();
         }
 
-        public static void deleteUsersByIndex(int userIndex)
+        public static void deleteUsersByIndex(int index)
         {
-            AdminRepository.deleteUserByIndex(userIndex);
+            AdminRepository.deleteUserByIndex(index);
         }
 
     }

@@ -18,10 +18,10 @@ namespace CentuDY.Repository
             return query.ToList();
         }
 
-        public static void deleteUserByIndex(int userIndex)
+        public static void deleteUserByIndex(int index)
         {
 
-            User userToDelete = db.Users.Find(userIndex);
+            User userToDelete = db.Users.Find(index);
 
             db.Users.Remove(userToDelete);
             db.SaveChanges();

@@ -24,8 +24,11 @@ namespace CentuDY.View.Admin
 
         protected void ViewUserTable_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int userIndex = int.Parse(e.CommandArgument.ToString());
-            AdminController.deleteUserByIndex(userIndex);
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridView grid = sender as GridView;
+            GridViewRow row = grid.Rows[index];
+
+            AdminController.deleteUserByIndex(int.Parse(row.Cells[1].Text));
 
             Response.Redirect("./ViewUser.aspx");
         }
