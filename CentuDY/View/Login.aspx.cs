@@ -68,5 +68,9 @@ namespace CentuDY.View
             }
         }
 
+        protected void RegisterButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
     }
 }
