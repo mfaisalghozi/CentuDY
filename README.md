@@ -31,7 +31,7 @@ As a web developer, you are asked to create a website using **ASP.NET** for this
 
 ### The ERD of CentuDY Database
 
-![ERD CentuDY](erd-centudy.png) (TBA)
+![image](https://user-images.githubusercontent.com/39329044/118642183-3cd6f600-b805-11eb-96dd-9e12d958efbe.png)
 
 ### User Roles
 
