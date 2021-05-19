@@ -80,5 +80,10 @@ namespace CentuDY.View
             int medicineId = Int32.Parse((sender as LinkButton).CommandArgument);
             Response.Redirect("Carts/AddToCart.aspx?id=" + medicineId);
         }
+
+        protected void ViewProfileBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Users/ProfilePage.aspx?id=" + user.UserId);
+        }
     }
 }
