@@ -12,6 +12,7 @@ namespace CentuDY.View.Users
     public partial class ProfilePage : System.Web.UI.Page
     {
         User u;
+        int userId;
         protected void Page_Load(object sender, EventArgs e)
         {   
             if (Request.QueryString["id"] == null)
@@ -21,7 +22,7 @@ namespace CentuDY.View.Users
             }
             else
             {
-                int userId = Int32.Parse(Request.QueryString["id"]);
+                userId = Int32.Parse(Request.QueryString["id"]);
                 getUserInfo(userId);
             }
 
@@ -40,12 +41,12 @@ namespace CentuDY.View.Users
 
         protected void updatePageBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("./UpdateProfile.aspx?id=" + userId);
         }
 
         protected void changePassBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("./ChangePassword.aspx?id=" + userId);
         }
     }
 }
