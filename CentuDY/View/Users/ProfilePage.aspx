@@ -18,5 +18,9 @@
                 <asp:Label ID="AddressLabel" runat="server" Text=""></asp:Label><br />
                 <br />
            </div>
+           <div class="form-buttons">
+               <asp:Button ID="updatePageBtn" runat="server" Text="Update Profile"  OnClick="updatePageBtn_Click" />
+               <asp:Button ID="changePassBtn" runat="server" text="Change Password" OnClick="changePassBtn_Click" />
+           </div>
     </div>   
 </asp:Content>

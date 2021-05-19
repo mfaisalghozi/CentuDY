@@ -37,5 +37,15 @@ namespace CentuDY.View.Users
             PhoneNumbLabel.Text = "Phone Number : " + u.PhoneNumber.ToString();
             AddressLabel.Text = "Address : " + u.Address;
         }
+
+        protected void updatePageBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void changePassBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
