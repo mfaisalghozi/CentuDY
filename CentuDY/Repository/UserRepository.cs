@@ -57,6 +57,16 @@ namespace CentuDY.Repository
             User u = db.Users.Where(user => user.UserId == id).FirstOrDefault();
             return u;
         }
+
+        public static void updateUserPassword(int id, string password)
+        {
+            User u = getUserById(id);
+            if (u != null)
+            {
+                u.Password = password;
+                db.SaveChanges();
+            }
+        }
     }
 
 }

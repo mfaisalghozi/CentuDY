@@ -34,5 +34,10 @@ namespace CentuDY.Handler
         {
             UserRepository.updateUser(id, username, name, gender, phone, address);
         }
+
+        public static void updatePassword(int id, string password)
+        {
+            UserRepository.updateUserPassword(id, password);
+        }
     }
 }
