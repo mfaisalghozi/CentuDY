@@ -11,6 +11,20 @@ namespace CentuDY.Repository
     {
         private static CentudyDatabaseEntities db = CentuDY.Singleton.SingletonDB.getInstance();
 
+        public static void updateUser(int id, string username, string name, string gender, string phone, string address)
+        {
+            User u = getUserById(id);
+            if (u != null)
+            {
+                u.Name = name;
+                u.Username = username;
+                u.Gender = gender;
+                u.PhoneNumber = phone;
+                u.Address = address;
+                db.SaveChanges();
+            }
+        }
+
         public static User createUser(String username, String password, String name, String gender,String phone,String address)
         {
             return UserFactory.createUser(username, password,name,gender,phone,address);
