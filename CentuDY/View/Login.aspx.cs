@@ -37,7 +37,7 @@ namespace CentuDY.View
 
         protected void login(object sender, EventArgs e)
         {
-            
+
             String username = UsernameBox.Text;
             String password = PasswordBox.Text;
 
@@ -56,7 +56,7 @@ namespace CentuDY.View
                 Session["role"] = login.RoleId;
                 if (RememberMe.Checked)
                 {
-                    HttpCookie cookie = new HttpCookie("remember_user", username+"%"+password);
+                    HttpCookie cookie = new HttpCookie("remember_user", username + "%" + password);
                     cookie.Expires = DateTime.Now.AddHours(2);
                     Response.Cookies.Add(cookie);
                 }
@@ -68,5 +68,9 @@ namespace CentuDY.View
             }
         }
 
+        protected void RegisterButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
     }
 }

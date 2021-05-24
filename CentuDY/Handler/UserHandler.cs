@@ -29,5 +29,15 @@ namespace CentuDY.Handler
         {
             return UserRepository.usernameUnique(username);
         }
+        
+        public static void updateProfile(int id, string username, string name, string gender, string phone, string address)
+        {
+            UserRepository.updateUser(id, username, name, gender, phone, address);
+        }
+
+        public static void updatePassword(int id, string password)
+        {
+            UserRepository.updateUserPassword(id, password);
+        }
     }
 }
