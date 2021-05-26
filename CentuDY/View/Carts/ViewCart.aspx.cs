@@ -46,7 +46,16 @@ namespace CentuDY.View.Carts
         protected void checkout(object sender, EventArgs e)
         {
             int userID = Int32.Parse(Session["user"].ToString());
-            ErrorMessageLabel.Text = CartController.checkout(userID);
+            string checkoutStatus = CartController.checkout(userID);
+            
+            if (checkoutStatus.Equals("success"))
+            {
+                Response.Redirect("CheckoutSuccess.aspx");
+            }
+            else if (checkoutStatus.Equals("empty"))
+            {
+                ErrorMessageLabel.Text = "Cart can't be empty";
+            }
             CartTable.DataBind();
         }
     }

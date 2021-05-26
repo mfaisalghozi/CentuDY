@@ -91,6 +91,7 @@
       <LastGenOutput>CentudyModel.cs</LastGenOutput>
     </Content>
     <Content Include="View\Carts\AddToCart.aspx" />
+    <Content Include="View\Carts\CheckoutSuccess.aspx" />
     <Content Include="View\Carts\ViewCart.aspx" />
     <Content Include="View\HomePage.aspx" />
     <Content Include="View\Login.aspx" />
@@ -164,6 +165,13 @@
     </Compile>
     <Compile Include="View\Carts\AddToCart.aspx.designer.cs">
       <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Carts\CheckoutSuccess.aspx.cs">
+      <DependentUpon>CheckoutSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Carts\CheckoutSuccess.aspx.designer.cs">
+      <DependentUpon>CheckoutSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Carts\ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>

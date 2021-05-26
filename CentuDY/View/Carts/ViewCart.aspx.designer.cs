@@ -51,15 +51,6 @@ namespace CentuDY.View.Carts
         protected global::System.Web.UI.WebControls.Label totalLabelValue;
 
         /// <summary>
-        /// CheckoutButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckoutButton;
-
-        /// <summary>
         /// ErrorMessageLabel control.
         /// </summary>
         /// <remarks>
@@ -67,5 +58,14 @@ namespace CentuDY.View.Carts
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label ErrorMessageLabel;
+
+        /// <summary>
+        /// CheckoutButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CheckoutButton;
     }
 }
