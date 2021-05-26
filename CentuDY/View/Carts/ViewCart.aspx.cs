@@ -58,5 +58,10 @@ namespace CentuDY.View.Carts
             }
             CartTable.DataBind();
         }
+
+        protected void ContinueShopBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Medicines/ViewMedicine.aspx");
+        }
     }
 }
