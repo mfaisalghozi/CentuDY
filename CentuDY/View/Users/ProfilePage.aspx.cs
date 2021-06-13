@@ -15,14 +15,14 @@ namespace CentuDY.View.Users
         int userId;
         protected void Page_Load(object sender, EventArgs e)
         {   
-            if (Request.QueryString["id"] == null)
+            if (Session["user"] == null)
             {
-                Response.Redirect("./HomePage.aspx");
+                Response.Redirect("../HomePage.aspx");
                 return;
             }
             else
             {
-                userId = Int32.Parse(Request.QueryString["id"]);
+                userId = int.Parse(Session["user"].ToString());
                 getUserInfo(userId);
             }
 

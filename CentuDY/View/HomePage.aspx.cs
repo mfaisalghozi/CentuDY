@@ -39,9 +39,11 @@ namespace CentuDY.View
                     ViewUserButton.Visible = true;
                     ViewCartButton.Visible = false;
                     MedicineRandomTable.Visible = false;
+                    
                 }
                 WelcomeMessageLabel.Text = "Welcome "+user.Name+"!";
                 loadTable();
+                
             }
         }
 
@@ -86,6 +88,16 @@ namespace CentuDY.View
         {
             Response.Redirect("Admin/ViewUser.aspx");
 
+        }
+
+        protected void ViewProfileBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Users/ProfilePage.aspx");
+        }
+
+        protected void ViewTransactionHistory_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Users/TransactionHistory.aspx");
         }
     }
 }

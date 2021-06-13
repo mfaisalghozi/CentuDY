@@ -102,6 +102,7 @@
     <Content Include="View\Register.aspx" />
     <Content Include="View\Users\ChangePassword.aspx" />
     <Content Include="View\Users\ProfilePage.aspx" />
+    <Content Include="View\Users\TransactionHistory.aspx" />
     <Content Include="View\Users\UpdateProfile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -253,6 +254,13 @@
     </Compile>
     <Compile Include="View\Users\ProfilePage.aspx.designer.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Users\TransactionHistory.aspx.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Users\TransactionHistory.aspx.designer.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Users\UpdateProfile.aspx.cs">
       <DependentUpon>UpdateProfile.aspx</DependentUpon>

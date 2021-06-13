@@ -18,11 +18,12 @@
     <asp:Button ID="InsertMedicineButton" runat="server" Text="Insert Medicine" OnClick="goToInsertMedicine" Visible="False" />
     </br>
     <asp:Button ID="ViewUserButton" runat="server" Text="View User" OnClick="goToViewUser" Visible="False" />
+    </br>
+    <asp:Button ID="ViewProfileBtn" runat="server" Text="Profile Info" OnClick="ViewProfileBtn_Click" Visible="true"/>
     <br />
     <asp:Button ID="ViewCartButton" runat="server" Text="View Cart" OnClick="goToViewCart" Visible="True" />
     </br>
-    <asp:Button ID="ViewProfileBtn" runat="server" Text="Profile Info" OnClick="ViewProfileBtn_Click" Visible="true"/>
-    </br>
+    <asp:Button ID="ViewTransactionHistory" runat="server" Text="View Transaction History" OnClick="ViewTransactionHistory_Click" Visible="true"/>
     </br>
     <asp:Button ID="Logout" runat="server" Text="Logout" OnClick="logout" />
 </asp:Content>

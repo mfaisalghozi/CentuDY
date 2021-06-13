@@ -60,6 +60,15 @@ namespace CentuDY.View
         protected global::System.Web.UI.WebControls.Button ViewUserButton;
 
         /// <summary>
+        /// ViewProfileBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ViewProfileBtn;
+
+        /// <summary>
         /// ViewCartButton control.
         /// </summary>
         /// <remarks>
@@ -69,13 +78,13 @@ namespace CentuDY.View
         protected global::System.Web.UI.WebControls.Button ViewCartButton;
 
         /// <summary>
-        /// ViewProfileBtn control.
+        /// ViewTransactionHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ViewProfileBtn;
+        protected global::System.Web.UI.WebControls.Button ViewTransactionHistory;
 
         /// <summary>
         /// Logout control.
