@@ -27,6 +27,8 @@
     </div>
     <br />
     <br />
-    <asp:Button ID="CheckoutButton" runat="server" OnClick="checkout" Text="Checkout" />
     <asp:Label ID="ErrorMessageLabel" runat="server" Text="" />
+    <br />
+    <asp:Button ID="CheckoutButton" runat="server" OnClick="checkout" Text="Checkout" />
+    <asp:Button ID="ContinueShopBtn" runat="server" OnClick="ContinueShopBtn_Click" Text="Continue Shopping" />
 </asp:Content>

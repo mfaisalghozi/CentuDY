@@ -7,75 +7,102 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CentuDY.View
+namespace CentuDY.View.Users
 {
 
 
-    public partial class Login
+    public partial class ChangePassword
     {
 
         /// <summary>
-        /// UsernameLabel control.
+        /// currentPassLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UsernameLabel;
+        protected global::System.Web.UI.WebControls.Label currentPassLabel;
 
         /// <summary>
-        /// UsernameBox control.
+        /// OldPasswordLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UsernameBox;
+        protected global::System.Web.UI.WebControls.Label OldPasswordLabel;
 
         /// <summary>
-        /// PasswordLabel control.
+        /// OldPasswordBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PasswordLabel;
+        protected global::System.Web.UI.WebControls.TextBox OldPasswordBox;
 
         /// <summary>
-        /// PasswordBox control.
+        /// NewPasswordLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordBox;
+        protected global::System.Web.UI.WebControls.Label NewPasswordLabel;
 
         /// <summary>
-        /// RememberMe control.
+        /// NewPasswordBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
+        protected global::System.Web.UI.WebControls.TextBox NewPasswordBox;
 
         /// <summary>
-        /// LoginButton control.
+        /// ConfirmNewPasswordLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
+        protected global::System.Web.UI.WebControls.Label ConfirmNewPasswordLabel;
 
         /// <summary>
-        /// RegisterButton control.
+        /// ConfirmNewPasswordBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterButton;
+        protected global::System.Web.UI.WebControls.TextBox ConfirmNewPasswordBox;
+
+        /// <summary>
+        /// BackToHomeBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BackToHomeBtn;
+
+        /// <summary>
+        /// changePasswordBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button changePasswordBtn;
+
+        /// <summary>
+        /// SuccessMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SuccessMessage;
 
         /// <summary>
         /// ErrorMessage control.

@@ -21,6 +21,8 @@
     <br />
     <asp:Button ID="ViewCartButton" runat="server" Text="View Cart" OnClick="goToViewCart" Visible="True" />
     </br>
+    <asp:Button ID="ViewProfileBtn" runat="server" Text="Profile Info" OnClick="ViewProfileBtn_Click" Visible="true"/>
+    </br>
     </br>
     <asp:Button ID="Logout" runat="server" Text="Logout" OnClick="logout" />
 </asp:Content>

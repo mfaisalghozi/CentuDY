@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CentuDY.View
+namespace CentuDY.View.Users
 {
 
 
-    public partial class Login
+    public partial class ProfilePage
     {
 
         /// <summary>
@@ -24,15 +24,6 @@ namespace CentuDY.View
         protected global::System.Web.UI.WebControls.Label UsernameLabel;
 
         /// <summary>
-        /// UsernameBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UsernameBox;
-
-        /// <summary>
         /// PasswordLabel control.
         /// </summary>
         /// <remarks>
@@ -42,48 +33,57 @@ namespace CentuDY.View
         protected global::System.Web.UI.WebControls.Label PasswordLabel;
 
         /// <summary>
-        /// PasswordBox control.
+        /// NameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordBox;
+        protected global::System.Web.UI.WebControls.Label NameLabel;
 
         /// <summary>
-        /// RememberMe control.
+        /// GenderLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
+        protected global::System.Web.UI.WebControls.Label GenderLabel;
 
         /// <summary>
-        /// LoginButton control.
+        /// PhoneNumbLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
+        protected global::System.Web.UI.WebControls.Label PhoneNumbLabel;
 
         /// <summary>
-        /// RegisterButton control.
+        /// AddressLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterButton;
+        protected global::System.Web.UI.WebControls.Label AddressLabel;
 
         /// <summary>
-        /// ErrorMessage control.
+        /// updatePageBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorMessage;
+        protected global::System.Web.UI.WebControls.Button updatePageBtn;
+
+        /// <summary>
+        /// changePassBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button changePassBtn;
     }
 }

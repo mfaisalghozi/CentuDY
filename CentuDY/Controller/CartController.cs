@@ -80,10 +80,10 @@ namespace CentuDY.Controller
             Cart cp = CartHandler.getCartMedicineByUser(userID);
             if (cp == null)
             {
-                return "Cart can't be empty";
+                return "empty";
             }
             CartHandler.checkout(userID);
-            return "Checkout Success";
+            return "success";
         }
 
 
