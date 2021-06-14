@@ -115,6 +115,7 @@
     <Compile Include="Controller\AdminController.cs" />
     <Compile Include="Controller\CartController.cs" />
     <Compile Include="Controller\MedicineController.cs" />
+    <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\MedicineFactory.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Handler\AdminHandler.cs" />
     <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Handler\MedicineHandler.cs" />
+    <Compile Include="Handler\TransactionHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Model\Cart.cs">
       <DependentUpon>CentudyModel.tt</DependentUpon>

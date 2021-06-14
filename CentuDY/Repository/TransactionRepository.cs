@@ -10,6 +10,25 @@ namespace CentuDY.Repository
     public class TransactionRepository
     {
         private static CentudyDatabaseEntities db = CentuDY.Singleton.SingletonDB.getInstance();
+
+        internal static List<string> getTransactionHistory(int userID)
+        {
+            List<Medicine> medicines = db.Medicines.ToList();
+            List<DetailTransaction> detailTransactions = db.DetailTransactions.ToList();
+            List<HeaderTransaction> headerTransactions = db.HeaderTransactions.ToList();
+
+            var query = "SELECT Medicines.Name, DetailTransactions.Quantity, HeaderTransaction.TransactionDate, " +
+                "(Medicines.price * DetailTransactions.Quantity) AS SubTotal, SUM(SubTotal) " +
+                "FROM HeaderTransactions HT, DetailTransactions DT, Medicines Med " +
+                "WHERE HT.TransactionId = DT.TransactionId, DT.MedicineId = Med.MedicineId, HT.UserId == " + userID +
+                ", GROUP BY HeaderTransaction.TransactionDate";
+            
+
+
+
+            return null;
+        }
+
         public static HeaderTransaction CreateHeaderTransaction(int userId, DateTime transactionDate)
         {
             return TransactionFactory.CreateHeaderTransaction(userId, transactionDate);
