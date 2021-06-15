@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -113,6 +116,11 @@
     <Compile Include="Controller\CartController.cs" />
     <Compile Include="Controller\MedicineController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Dataset\TransactionDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\MedicineFactory.cs" />
     <Compile Include="Factory\TransactionFactory.cs" />
@@ -270,6 +278,17 @@
     <Content Include="App_Code\CartDataset.xss">
       <DependentUpon>CartDataset.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\TransactionDataset.xsc">
+      <DependentUpon>TransactionDataset.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\TransactionDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionDataset.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\TransactionDataset.xss">
+      <DependentUpon>TransactionDataset.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="View\Navigation.Master" />
     <None Include="Web.Debug.config">
@@ -279,9 +298,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
