@@ -11,22 +11,23 @@ namespace CentuDY.Repository
     {
         private static CentudyDatabaseEntities db = CentuDY.Singleton.SingletonDB.getInstance();
 
-        internal static List<string> getTransactionHistory(int userID)
+        internal static dynamic getTransactionHistory(int userID)
         {
-            List<Medicine> medicines = db.Medicines.ToList();
-            List<DetailTransaction> detailTransactions = db.DetailTransactions.ToList();
-            List<HeaderTransaction> headerTransactions = db.HeaderTransactions.ToList();
 
-            var query = "SELECT Medicines.Name, DetailTransactions.Quantity, HeaderTransaction.TransactionDate, " +
-                "(Medicines.price * DetailTransactions.Quantity) AS SubTotal, SUM(SubTotal) " +
-                "FROM HeaderTransactions HT, DetailTransactions DT, Medicines Med " +
-                "WHERE HT.TransactionId = DT.TransactionId, DT.MedicineId = Med.MedicineId, HT.UserId == " + userID +
-                ", GROUP BY HeaderTransaction.TransactionDate";
-            
+            var query = from header in db.HeaderTransactions.ToList()
+                        join detail in db.DetailTransactions.ToList() on header.TransactionId equals detail.TransactionId
+                        join medicine in db.Medicines.ToList() on detail.MedicineId equals medicine.MedicineId
+                        select new { Name = medicine.Name, Quantity = detail.Quantity, TransactionDate = header.TransactionDate, SubTotal = medicine.Price * detail.Quantity };
 
+            dynamic transaction = query;
 
+            return transaction;
 
-            return null;
+            //return from header in db.HeaderTransactions
+            //            join detail in db.DetailTransactions on header.TransactionId equals detail.TransactionId
+            //            join medicine in db.Medicines on detail.MedicineId equals medicine.MedicineId
+            //            select new TransactionHistory { Name = medicine.Name, Quantity = detail.Quantity, TransactionDate = header.TransactionDate};
+              
         }
 
         public static HeaderTransaction CreateHeaderTransaction(int userId, DateTime transactionDate)
