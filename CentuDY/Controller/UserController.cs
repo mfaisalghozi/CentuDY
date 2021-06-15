@@ -26,6 +26,7 @@ namespace CentuDY.Controller
 
             return "";
         }
+
         public static string updateProfile(int id,string username,string name,string gender,string phone,string address)
         {
             UserHandler.updateProfile(id, username, name, gender, phone, address);

@@ -10,6 +10,26 @@ namespace CentuDY.Repository
     public class TransactionRepository
     {
         private static CentudyDatabaseEntities db = CentuDY.Singleton.SingletonDB.getInstance();
+
+        internal static dynamic getTransactionHistory(int userID)
+        {
+
+            var query = from header in db.HeaderTransactions.ToList()
+                        join detail in db.DetailTransactions.ToList() on header.TransactionId equals detail.TransactionId
+                        join medicine in db.Medicines.ToList() on detail.MedicineId equals medicine.MedicineId
+                        select new { Name = medicine.Name, Quantity = detail.Quantity, TransactionDate = header.TransactionDate, SubTotal = medicine.Price * detail.Quantity };
+
+            dynamic transaction = query;
+
+            return transaction;
+
+            //return from header in db.HeaderTransactions
+            //            join detail in db.DetailTransactions on header.TransactionId equals detail.TransactionId
+            //            join medicine in db.Medicines on detail.MedicineId equals medicine.MedicineId
+            //            select new TransactionHistory { Name = medicine.Name, Quantity = detail.Quantity, TransactionDate = header.TransactionDate};
+              
+        }
+
         public static HeaderTransaction CreateHeaderTransaction(int userId, DateTime transactionDate)
         {
             return TransactionFactory.CreateHeaderTransaction(userId, transactionDate);

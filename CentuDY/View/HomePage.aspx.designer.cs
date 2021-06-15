@@ -51,13 +51,13 @@ namespace CentuDY.View
         protected global::System.Web.UI.WebControls.Button InsertMedicineButton;
 
         /// <summary>
-        /// ViewCartButton control.
+        /// ViewUserButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ViewCartButton;
+        protected global::System.Web.UI.WebControls.Button ViewUserButton;
 
         /// <summary>
         /// ViewProfileBtn control.
@@ -67,6 +67,24 @@ namespace CentuDY.View
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ViewProfileBtn;
+
+        /// <summary>
+        /// ViewCartButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ViewCartButton;
+
+        /// <summary>
+        /// ViewTransactionHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ViewTransactionHistory;
 
         /// <summary>
         /// Logout control.
