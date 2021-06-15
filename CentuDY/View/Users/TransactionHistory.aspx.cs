@@ -11,7 +11,6 @@ namespace CentuDY.View.Users
 {
     public partial class TransactionHistory : System.Web.UI.Page
     {
-        private static CentudyDatabaseEntities db = CentuDY.Singleton.SingletonDB.getInstance();
         dynamic transactionHistory;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,13 +25,20 @@ namespace CentuDY.View.Users
             TransactionHistoryTable.DataSource = transactionHistory;
             TransactionHistoryTable.DataBind();
 
-            //var query = from header in db.HeaderTransactions.ToList()
-            //            join detail in db.DetailTransactions.ToList() on header.TransactionId equals detail.TransactionId
-            //            join medicine in db.Medicines.ToList() on detail.MedicineId equals medicine.MedicineId
-            //            select new { Name = medicine.Name, Quantity = detail.Quantity, TransactionDate = header.TransactionDate, SubTotal = medicine.Price*detail.Quantity };
+            var grandTotal = 0;
 
-            //TransactionHistoryTable.DataSource = query.ToList();
-            //TransactionHistoryTable.DataBind();
+
+            for (int i = 0; i < TransactionHistoryTable.Rows.Count; i++)
+            {
+                grandTotal = grandTotal + Int32.Parse(TransactionHistoryTable.Rows[i].Cells[3].Text);
+            }
+
+            GrandTotal.Text = "Grand Total : " + grandTotal.ToString();
+        }
+
+        protected void HomeBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../HomePage.aspx");
         }
     }
 }

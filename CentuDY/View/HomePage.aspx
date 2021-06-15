@@ -26,4 +26,5 @@
     <asp:Button ID="ViewTransactionHistory" runat="server" Text="View Transaction History" OnClick="ViewTransactionHistory_Click" Visible="true"/>
     </br>
     <asp:Button ID="Logout" runat="server" Text="Logout" OnClick="logout" />
+    <asp:Label ID="userid" runat="server" Text=""></asp:Label>
 </asp:Content>

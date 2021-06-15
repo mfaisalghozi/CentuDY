@@ -43,7 +43,9 @@ namespace CentuDY.View
                 }
                 WelcomeMessageLabel.Text = "Welcome "+user.Name+"!";
                 loadTable();
-                
+                userid.Text = "User id is " + id;
+
+
             }
         }
 

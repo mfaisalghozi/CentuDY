@@ -9,6 +9,6 @@
         </asp:GridView>
         <br />
     </div>
-    
-
+    <asp:Label ID="GrandTotal" runat="server" Text=""></asp:Label>
+    <asp:Button ID="HomeBtn" runat="server" Text="Home" OnClick="HomeBtn_Click" />
 </asp:Content>
