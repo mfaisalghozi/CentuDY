@@ -24,7 +24,6 @@ namespace CentuDY.Repository
             return transaction;
               
         }
-
         public static HeaderTransaction CreateHeaderTransaction(int userId, DateTime transactionDate)
         {
             return TransactionFactory.CreateHeaderTransaction(userId, transactionDate);
