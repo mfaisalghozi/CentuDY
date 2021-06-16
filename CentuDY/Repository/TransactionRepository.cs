@@ -21,7 +21,6 @@ namespace CentuDY.Repository
                         select new { Name = medicine.Name, Quantity = detail.Quantity, TransactionDate = header.TransactionDate, SubTotal = medicine.Price * detail.Quantity };
 
             dynamic transaction = query;
-
             return transaction;
               
         }
