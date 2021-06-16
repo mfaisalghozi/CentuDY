@@ -1,5 +1,4 @@
 ﻿using CentuDY.Handler;
-using CentuDY.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +8,9 @@ namespace CentuDY.Controller
 {
     public class TransactionController
     {
-        internal static dynamic getTransactionHistory(int userID)
+        internal static List<string> getTransactionHistory(int userID)
         {
-           return TransactionHandler.getTransactionHistory(userID);
+            return TransactionHandler.getTransactionHistory(userID);
         }
     }
 }
